@@ -3,6 +3,7 @@ import pygame
 
 pygame.init()
 pygame.font.init()
+label_font = pygame.font.SysFont('', 50, bold=True)
 font = pygame.font.SysFont('', 40, bold=True)
 small_font = pygame.font.SysFont('', 30, bold=True)
 is_running = True
@@ -157,7 +158,7 @@ def main():
         edges()
         pygame.draw.line(screen, YELLOW, (0, 196), (WIDTH, 196), 4)
 
-        label = font.render(user_input, True, YELLOW, None)
+        label = label_font.render(user_input, True, YELLOW, None)
         center = label.get_rect(center=(WIDTH//2, 105))
         screen.blit(label, center)
 
